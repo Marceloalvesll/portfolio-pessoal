@@ -1,0 +1,64 @@
+.habilidades-container {
+  padding: 4rem 2rem;
+  background-color: #ffffff; /* Um fundo branco para destacar da cor do body */
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.categorias-container {
+  display: grid;
+  /* Cria colunas responsivas: no mínimo 250px, no máximo 1 fração do espaço */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categoria {
+  background-color: #f8f9fa; /* Um cinza muito claro para os cards */
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.categoria-titulo {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #007bff; /* Um destaque azul */
+  padding-bottom: 0.5rem;
+}
+
+.skills-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-lista li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Adiciona um ícone de "check" antes de cada skill */
+.skills-lista li::before {
+  content: '✓';
+  color: #007bff;
+  margin-right: 0.8rem;
+  font-weight: bold;
+}

@@ -22,8 +22,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
-            ],
+  "@angular/material/prebuilt-themes/cyan-orange.css",
+  "src/styles.css"
+],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -86,5 +87,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "a9cf4cab-ef2d-4746-9a65-6c2f54743220"
   }
 }

@@ -1,0 +1,21 @@
+.sobre-mim-container {
+  /* Define um preenchimento interno e centraliza o texto */
+  padding: 4rem 2rem;
+  text-align: center;
+
+  /* Define uma largura máxima e centraliza o bloco na página */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #555;
+}
