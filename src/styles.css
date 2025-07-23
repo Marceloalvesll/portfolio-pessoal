@@ -1,4 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+/* Definindo a nossa paleta de cores para o Tema Escuro */
+:root {
+  --cor-fundo: #0c1022;
+  --cor-fundo-secundario: #191f36;
+  --cor-primaria: #00e0ff; /* Um ciano bem vibrante */
+  --cor-texto-principal: #ffffff;
+  --cor-texto-secundario: #c1c1c1;
+  --cor-borda-card: #2e3b5e;
+}
 
+
+
+html, body { height: 100%; }
+body {
+margin: 0;
+  font-family: "Poppins", sans-serif; /* A fonte moderna que já adicionámos */
+
+  /* Aplicando as cores do tema */
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-principal);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

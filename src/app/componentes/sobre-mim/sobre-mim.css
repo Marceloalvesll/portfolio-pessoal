@@ -1,21 +1,113 @@
-.sobre-mim-container {
-  /* Define um preenchimento interno e centraliza o texto */
-  padding: 4rem 2rem;
-  text-align: center;
-
-  /* Define uma largura máxima e centraliza o bloco na página */
-  max-width: 900px;
-  margin: 0 auto;
+.home {
+  display: flex;
+  justify-content: space-between; /* Coloca espaço entre texto e imagem */
+  align-items: center;
+  padding: 7rem 9% 2rem;
+  min-height: 100vh;
+  gap: 2rem; /* Adiciona um espaço entre as colunas */
 }
 
-h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1.5rem;
-  color: #333;
+.home-content {
+  max-width: 600px;
 }
 
-p {
+.home-content h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+.home-content h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.home-content p {
+  font-size: 1.1rem;
+  color: var(--cor-texto-secundario);
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5s ease;
+}
+
+.social-media a:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
   font-size: 1.2rem;
-  line-height: 1.7;
-  color: #555;
+  color: var(--second-bg-color);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: .5s ease;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+.home-img {
+  position: relative;
+  width: 450px; /* Tamanho fixo para o container da imagem */
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-img::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--main-color); /* A cor do brilho */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+.home-img img {
+  position: relative;
+  width: 95%; /* Um pouco menor que o container para criar a borda */
+  height: 95%;
+  object-fit: cover; /* Garante que a imagem preencha o espaço */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-24px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.multiple-text {
+    color: var(--main-color);
 }

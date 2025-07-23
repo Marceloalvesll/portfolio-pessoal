@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-// 1. Importar o módulo do botão do Angular Material
+import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-projetos',
   standalone: true,
-  // 2. Adicionar o MatButtonModule à lista de imports do componente
-  imports: [MatButtonModule],
+  imports: [MatCardModule, MatButtonModule],
   templateUrl: './projetos.html',
   styleUrl: './projetos.css'
 })
