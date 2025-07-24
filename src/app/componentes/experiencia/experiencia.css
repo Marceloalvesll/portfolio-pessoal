@@ -1,21 +1,22 @@
 .experiencia-container {
   padding: 4rem 2rem;
-  background-color: #ffffff;
+  /* Removemos o fundo branco para usar o fundo principal do site */
 }
 
 h2 {
   text-align: center;
   font-size: 2.8rem;
   margin-bottom: 4rem;
-  color: #333;
+  /* Usamos a cor de texto do nosso tema */
+  color: var(--text-color);
 }
 
 .timeline {
   max-width: 900px;
   margin: 0 auto;
   position: relative;
-  /* A linha vertical da timeline */
-  border-left: 3px solid #007bff;
+  /* A linha da timeline agora usa a nossa cor principal (ciano) */
+  border-left: 3px solid var(--main-color);
 }
 
 .experiencia-item {
@@ -24,34 +25,34 @@ h2 {
   position: relative;
 }
 
-/* Remove a margem do último item para um visual mais limpo */
 .experiencia-item:last-child {
     margin-bottom: 0;
 }
 
-/* A bolinha na linha do tempo */
 .experiencia-item::before {
   content: '';
-  background-color: #ffffff;
-  border: 3px solid #007bff;
+  /* A bolinha agora combina com o tema escuro */
+  background-color: var(--bg-color);
+  border: 3px solid var(--main-color);
   border-radius: 50%;
   width: 15px;
   height: 15px;
   position: absolute;
-  left: -10.5px; /* (15px / 2) + (3px / 2) = 9px, arredondado para um visual melhor */
+  left: -10.5px;
   top: 5px;
-  z-index: 1; /* Para ficar sobre a linha */
+  z-index: 1;
 }
 
 .cargo {
   font-size: 1.8rem;
-  color: #333;
+  /* Usamos as cores de texto do nosso tema */
+  color: var(--text-color);
   margin: 0 0 0.5rem 0;
 }
 
 .empresa-data {
   font-size: 1rem;
-  color: #555;
+  color: var(--cor-texto-secundario);
   margin: 0 0 1.5rem 0;
   font-style: italic;
 }
@@ -65,6 +66,6 @@ h2 {
 .responsabilidades li {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--cor-texto-secundario);
   margin-bottom: 0.7rem;
 }
