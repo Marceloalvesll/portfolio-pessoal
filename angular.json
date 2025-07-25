@@ -20,7 +20,8 @@
                 "glob": "**/*",
                 "input": "public"
               },
-              "src/assets"
+              "src/assets",
+              "src/thanks"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/cyan-orange.css",

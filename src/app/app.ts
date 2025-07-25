@@ -7,19 +7,21 @@ import { SobreMim } from './componentes/sobre-mim/sobre-mim';
 import { Experiencia } from './componentes/experiencia/experiencia';
 import { Habilidades } from './componentes/habilidades/habilidades';
 import { Projetos } from './componentes/projetos/projetos';
+import { Contato } from "./componentes/contato/contato";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, // Adicionar CommonModule para usar [class.show]
-    Header, 
-    Footer, 
-    SobreMim, 
-    Experiencia, 
-    Habilidades, 
-    Projetos
-  ],
+    CommonModule, 
+    Header,
+    Footer,
+    SobreMim,
+    Experiencia,
+    Habilidades,
+    Projetos,
+    Contato
+],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

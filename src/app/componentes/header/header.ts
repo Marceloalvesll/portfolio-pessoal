@@ -1,15 +1,31 @@
-import { Component } from '@angular/core';
-// 1. Importar o RouterLink para que o componente o conheça
-import { RouterLink } from '@angular/router';
+import { Component, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  // 2. Adicionar o RouterLink à lista de imports do componente
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './header.html',
   styleUrl: './header.css'
 })
 export class Header {
+  isMenuOpen = false;
+  isSticky: boolean = false;
 
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (window.scrollY > 100) {
+      this.isSticky = true;
+    } else {
+      this.isSticky = false;
+    }
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
 }

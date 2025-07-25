@@ -1,0 +1,70 @@
+:host {
+  display: block; /* Garante que a animação funcione bem */
+  animation: fadeInUp 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contato-container {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+
+.contato-container form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.input-box input,
+form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: .8rem;
+  margin: .7rem 0;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.input-box input:focus,
+form textarea:focus {
+    border-color: var(--main-color);
+}
+
+.input-box input {
+  width: 49%;
+}
+
+form textarea {
+  resize: none;
+}
+
+.btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}

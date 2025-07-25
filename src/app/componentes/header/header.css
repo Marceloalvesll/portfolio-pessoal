@@ -1,16 +1,28 @@
+/* ESTADO INICIAL (NO TOPO DA PÁGINA) */
 .cabecalho {
-  /* Usando as variáveis para o fundo */
-  background-color: var(--cor-fundo-secundario);
-  padding: 1rem 0;
-  box-shadow: 0 2px 8px rgba(0, 224, 255, 0.1); /* Sombra com a cor primária */
-
-  /* Adicionando uma borda inferior subtil */
-  border-bottom: 1px solid var(--cor-borda-card);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 7%;
+  background: transparent;
+  z-index: 100;
+  transition: all 0.4s ease;
 }
 
+/* ESTADO AO ROLAR (HEADER "COLADO") */
+.cabecalho.sticky {
+  position: fixed;
+  padding: 1rem 7%;
+  background: var(--bg-color);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--second-bg-color);
+}
+
+/* O container que controla o alinhamento interno */
 .container {
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -18,15 +30,17 @@
 }
 
 .logo {
-  margin: 0;
   font-size: 1.8rem;
-  color: var(--cor-texto-principal); /* Usando a variável */
+  color: var(--text-color);
+  font-weight: 600;
+  text-decoration: none;
 }
 
+/* ESTA REGRA ESTAVA EM FALTA - FAZ OS LINKS FICAREM NA HORIZONTAL */
 nav ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
   display: flex;
   gap: 2rem;
 }
@@ -34,11 +48,49 @@ nav ul {
 nav a {
   font-size: 1.1rem;
   color: var(--cor-texto-secundario);
-  margin-left: 2rem;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 nav a:hover {
   color: var(--main-color);
+}
+
+#menu-icon {
+  font-size: 2.6rem;
+  color: var(--text-color);
+  display: none; /* Escondido por padrão em telas grandes */
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  /* Esconde a navegação horizontal em telas pequenas */
+  nav ul {
+    display: none;
+  }
+
+  /* Quando o menu está ativo, ele vira um bloco vertical */
+  nav.active ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    text-align: center;
+  }
+
+  nav.active a {
+    display: block;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+  }
 }

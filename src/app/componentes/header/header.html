@@ -1,13 +1,16 @@
-<header class="cabecalho">
+<header class="cabecalho" [class.sticky]="isSticky">
   <div class="container">
-    <h1 class="logo">Marcelo Alves</h1>
-    <nav>
-  <ul>
-    <li><a href="#sobre">Sobre Mim</a></li>
-    <li><a href="#experiencia">Experiência</a></li>
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#habilidades">Habilidades</a></li>
-  </ul>
-</nav>
+    <a href="#sobre" class="logo">Marcelo Alves</a>
+
+    <i class='bx bx-menu' id="menu-icon" (click)="toggleMenu()"></i>
+
+    <nav [class.active]="isMenuOpen" (click)="closeMenu()">
+      <ul>
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
