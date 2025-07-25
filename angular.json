@@ -32,12 +32,11 @@
             "ssr": {
               "entry": "src/server.ts"
             },
-            "externalDependencies": [
-              "typed.js"
-            ]
+            "externalDependencies": []
           },
           "configurations": {
             "production": {
+              "outputPath": "dist/portfolio-pessoal",
               "budgets": [
                 {
                   "type": "initial",
@@ -89,6 +88,9 @@
               "src/styles.css"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
